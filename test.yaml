@@ -1,1 +1,200 @@
-
+name: Untitled Design
+version: 0.0.11
+services:
+  http-scaled-object-be:
+    annotations: {}
+    apiVersion: http.keda.sh/v1alpha1
+    dependsOn: []
+    id: null
+    isAnnotation: null
+    labels: {}
+    model: keda-http-scaler
+    name: http-scaled-object-be
+    namespace: default
+    settings:
+      spec:
+        hosts: []
+        path Prefixes: []
+        ports: []
+        scale Target Ref: {}
+        scaling Metric:
+          request Rate:
+            granularity: 1s
+            target Value: 100
+            window: 1m
+    traits:
+      meshmap:
+        edges:
+        - data:
+            id: 32f88d18-65e8-412e-bcda-f2d12a0c99a8
+            source: 29252905-d058-4e6f-bf66-127fd8d90932
+            subType: Network
+            target: bfdb4000-77b8-4040-8c65-6ed099f896db
+          style:
+            control-point-distances: null
+            control-point-weights: "0.5"
+            curve-style: bezier
+            haystack-radius: "0"
+            line-color: rgb(153,153,153)
+            line-style: dotted
+            opacity: "1"
+            segment-distances: 20px
+            segment-weights: "0.5"
+            target-arrow-shape: vee
+            taxi-direction: auto
+            taxi-turn: 50%
+            taxi-turn-min-distance: 10px
+            width: 1.5px
+        id: 29252905-d058-4e6f-bf66-127fd8d90932
+        label: HTTP Scaled Object
+        meshmodel-data:
+          category:
+            metadata: null
+            name: Serverless
+          components: null
+          description: ""
+          displayName: KEDA HTTP Scaler
+          hostID: 26e64aa8-2d86-57bd-92b3-2a73160d27b4
+          id: 341dae55-e497-588d-9c08-86161a013f98
+          metadata:
+            capabilities: ""
+            defaultData: ""
+            isAnnotation: false
+            primaryColor: '#326de6'
+            secondaryColor: '#77B2FF'
+            shape: circle
+            shapePolygonPoints: ""
+            source_uri: https://kedacore.github.io/charts/keda-add-ons-http-0.8.0.tgz
+            styleOverrides: ""
+            styles: ""
+            svgColor: ui/public/static/img/meshmodels/keda/color/keda-color.svg
+            svgComplete: ""
+            svgWhite: ui/public/static/img/meshmodels/aws-eks-controller/white/identityproviderconfig-white.svg
+          model:
+            version: v0.8.0
+          name: keda-http-scaler
+          registrant:
+            hostname: artifacthub
+          relationships: null
+          schemaVersion: models.meshery.io/v1beta1
+          status: enabled
+          subCategory: Installable Platform
+          version: v1.0.0
+        meshmodel-metadata:
+          capabilities: ""
+          defaultData: ""
+          genealogy: ""
+          isAnnotation: false
+          isNamespaced: true
+          primaryColor: '#326de6'
+          secondaryColor: '#77B2FF'
+          shape: circle
+          shapePolygonPoints: ""
+          status: enabled
+          styleOverrides:
+            z-index: 3
+          styles: ""
+          subCategory: ""
+          svgColor: ui/public/static/img/meshmodels/keda/color/cloudeventsource-color.svg
+          svgComplete: ""
+          svgWhite: ui/public/static/img/meshmodels/keda-http-scaler/white/httpscaledobject-white.svg
+        position:
+          posX: 299.54402883131667
+          posY: 15.588200622628563
+        whiteboardData: {}
+    type: HTTPScaledObject
+    version: v0.8.0
+  service-yr:
+    annotations: {}
+    apiVersion: v1
+    dependsOn: []
+    id: null
+    isAnnotation: null
+    labels: {}
+    model: kubernetes
+    name: service-yr
+    namespace: default
+    settings: {}
+    traits:
+      meshmap:
+        edges:
+        - data:
+            id: 32f88d18-65e8-412e-bcda-f2d12a0c99a8
+            source: 29252905-d058-4e6f-bf66-127fd8d90932
+            subType: Network
+            target: bfdb4000-77b8-4040-8c65-6ed099f896db
+          style:
+            control-point-distances: null
+            control-point-weights: "0.5"
+            curve-style: bezier
+            haystack-radius: "0"
+            line-color: rgb(153,153,153)
+            line-style: dotted
+            opacity: "1"
+            segment-distances: 20px
+            segment-weights: "0.5"
+            target-arrow-shape: vee
+            taxi-direction: auto
+            taxi-turn: 50%
+            taxi-turn-min-distance: 10px
+            width: 1.5px
+        id: bfdb4000-77b8-4040-8c65-6ed099f896db
+        label: Service
+        meshmodel-data:
+          category:
+            metadata: null
+            name: Orchestration & Management
+          components: null
+          description: ""
+          displayName: Kubernetes
+          hostID: 26e64aa8-2d86-57bd-92b3-2a73160d27b4
+          id: 45d9a4de-8590-575e-9838-9fdb32058bdd
+          metadata:
+            isAnnotation: false
+            svgColor: ui/public/static/img/meshmodels/kubernetes/color/kubernetes-color.svg
+            svgWhite: ui/public/static/img/meshmodels/kubernetes/white/kubernetes-white.svg
+          model:
+            version: v1.25.2
+          name: kubernetes
+          registrant:
+            hostname: artifacthub
+          relationships: null
+          schemaVersion: models.meshery.io/v1beta1
+          status: enabled
+          subCategory: ""
+          version: v1.0.0
+        meshmodel-metadata:
+          capabilities: ""
+          defaultData: ""
+          genealogy: ""
+          isAnnotation: false
+          isCustomResource: false
+          isModelAnnotation: "FALSE"
+          isNamespaced: true
+          logoURL: https://github.com/cncf/artwork/blob/master/projects/kubernetes/icon/white/kubernetes-icon-white.svg
+          model: kubernetes
+          modelDisplayName: Kubernetes
+          primaryColor: '#326CE5'
+          secondaryColor: '#7aa1f0'
+          shape: round-triangle
+          shapePolygonPoints: ""
+          status: enabled
+          styleOverrides:
+            background-position-y: 4.5
+            height: 20
+            padding: 12
+            width: 20
+            x: 10px
+            "y": 12px
+            z-index: 4
+          styles: '{"height":20,"width":20,"padding":12,"background-position-y":4.5,"x":"10px","y":"12px"}'
+          subCategory: ""
+          svgColor: ui/public/static/img/meshmodels/kubernetes/color/service-color.svg
+          svgComplete: ""
+          svgWhite: ui/public/static/img/meshmodels/kubernetes/white/service-white.svg
+        position:
+          posX: 417.5298622542522
+          posY: 14.579071050742527
+        whiteboardData: {}
+    type: Service
+    version: v1.25.2
